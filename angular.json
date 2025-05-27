@@ -21,12 +21,10 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
+              "src/assets"
+          ],
             "styles": [
+              "node_modules/animate.css/animate.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -79,12 +77,10 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
+              "src/assets"
+        ],
             "styles": [
+              "node_modules/animate.css/animate.min.css",
               "src/styles.css"
             ],
             "scripts": []
