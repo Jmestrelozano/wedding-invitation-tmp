@@ -3,6 +3,7 @@
 
 <!-- Contenido principal -->
 <div *ngIf="showContent">
+  <app-splash-music (iconClicked)="toggleMusic()" />
   <router-outlet></router-outlet>
 </div>
 
