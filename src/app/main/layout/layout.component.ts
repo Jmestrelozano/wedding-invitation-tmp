@@ -15,21 +15,30 @@ import {
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { LoaderHeartComponent } from '../../components/common/loader-heart/loader-heart.component';
+import { SplashMusicComponent } from '../../components/ui/lottie/splash-music/splash-music.component';
 
 @Component({
   standalone: true,
   selector: 'app-layout',
   templateUrl: './layout.component.html',
-  imports: [CommonModule, RouterModule, LoaderHeartComponent],
+  imports: [
+    CommonModule,
+    RouterModule,
+    LoaderHeartComponent,
+    SplashMusicComponent,
+  ],
 })
 export class LayoutComponent implements OnInit {
   @ViewChild('modalContent', { static: false }) modalContent!: ElementRef;
+  @ViewChild(SplashMusicComponent) splashComp!: SplashMusicComponent;
 
   isLoading = true;
   showWelcomeModal = false;
   showContent = false;
   bounce = false;
 
+  private audio: HTMLAudioElement | null = null; // Agregado
+  private isMusicPlaying = false;
   private minTime = 2000; // 2 segundos
   private startTime = 0;
 
@@ -74,13 +83,36 @@ export class LayoutComponent implements OnInit {
     this.showContent = true;
     if (withMusic) {
       this.playBackgroundMusic();
+    } else {
+      setTimeout(() => {
+        this.splashComp.pauseAnimation();
+      }, 300); // Pausa Lottie inmediatamente
     }
   }
 
   playBackgroundMusic() {
-    const audio = new Audio('assets/music.mp3'); // Asegúrate que este archivo existe
-    audio.loop = true;
-    audio.play();
+    if (!this.audio) {
+      this.audio = new Audio('assets/music/EdSheeran-Perfect(Lyrics).mp3');
+      this.audio.loop = true;
+      this.audio.volume = 0.2;
+    }
+
+    this.audio.play();
+    this.isMusicPlaying = true;
+  }
+
+  toggleMusic() {
+    if (!this.audio) return;
+
+    if (this.isMusicPlaying) {
+      this.audio.pause();
+      this.splashComp.pauseAnimation(); // pausa Lottie
+    } else {
+      this.audio.play();
+      this.splashComp.playAnimation(); // reanuda Lottie
+    }
+
+    this.isMusicPlaying = !this.isMusicPlaying;
   }
 
   triggerBounce() {
