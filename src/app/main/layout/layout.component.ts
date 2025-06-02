@@ -49,7 +49,9 @@ export class LayoutComponent implements OnInit {
     this.startTime = Date.now();
     setTimeout(() => {
       this.isLoading = false;
+      this.showContent = true;
       this.showWelcomeModal = true;
+      this.disableScroll(); // Bloquea scroll cuando se abre el modal
     }, this.minTime);
 
     // Luego escucha navegación
@@ -80,7 +82,8 @@ export class LayoutComponent implements OnInit {
 
   onAccept(withMusic: boolean) {
     this.showWelcomeModal = false;
-    this.showContent = true;
+    this.enableScroll(); // Restaura scroll
+
     if (withMusic) {
       this.playBackgroundMusic();
     } else {
@@ -90,11 +93,19 @@ export class LayoutComponent implements OnInit {
     }
   }
 
+  disableScroll() {
+    this.renderer.setStyle(document.body, 'overflow', 'hidden');
+  }
+
+  enableScroll() {
+    this.renderer.removeStyle(document.body, 'overflow');
+  }
+
   playBackgroundMusic() {
     if (!this.audio) {
       this.audio = new Audio('assets/music/EdSheeran-Perfect(Lyrics).mp3');
       this.audio.loop = true;
-      this.audio.volume = 0.2;
+      this.audio.volume = 0.3; // Ajusta el volumen según sea necesario
     }
 
     this.audio.play();
