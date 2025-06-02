@@ -1,16 +1,21 @@
 <!-- Loader -->
 <app-loader-heart *ngIf="isLoading"></app-loader-heart>
 
-<!-- Contenido principal -->
-<div *ngIf="showContent">
+<!-- Contenido principal (siempre renderizado, pero oculto visualmente si está cargando) -->
+<div
+  [class.invisible]="isLoading"
+  [class.pointer-events-none]="isLoading"
+  [class.opacity-0]="isLoading"
+  class="transition-opacity duration-300 ease-in-out"
+>
   <app-splash-music (iconClicked)="toggleMusic()" />
   <router-outlet></router-outlet>
 </div>
 
 <!-- Modal de bienvenida -->
 <div
-  *ngIf="!isLoading && showWelcomeModal"
-  class="fixed inset-0 bg-[#4A6360] backdrop-blur-sm flex items-center justify-center z-50"
+  *ngIf="showWelcomeModal"
+  class="fixed inset-0 bg-[#4A6360]/70 backdrop-blur-sm flex items-center justify-center z-[9999]"
   (click)="triggerBounce()"
 >
   <div
