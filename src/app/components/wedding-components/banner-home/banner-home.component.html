@@ -1,27 +1,23 @@
 <section
-  class="parallax-container relative h-[960px] md:h-[1296px] 2xl:h-[1900px] flex items-center justify-center text-center text-white pb-[40%] md:pb-[20%]"
->
+  class="parallax-container relative h-[960px] md:h-[1296px] 2xl:h-[1900px] flex items-center justify-center text-center text-white pb-[40%] md:pb-[20%]">
   <div class="bg-overlay absolute inset-0"></div>
 
   <div class="z-10 h-screen flex flex-col justify-center">
     <!-- Box nombre y fecha -->
     <div class="flex flex-row">
       <div class="h-[1px] w-1/6 md:w-1/4 bg-white mx-auto my-0 mt-5"></div>
-      <p style="font-family: 'Open Sans Light'" class="text-[25px]">
+      <p class="text-[25px] font-light">
         15.05.2021
       </p>
       <div class="h-[1px] w-1/6 md:w-1/4 bg-white mx-auto my-0 mt-5"></div>
     </div>
 
-    <h1 style="font-family: 'Cookie'" class="text-[100px] leading-[0.9] md:leading-[1.5] md:text-[130px] font-bold">
+    <h1 class="text-[100px] leading-[0.9] md:leading-[1.5] md:text-[130px] font-bold font-cookie">
       Jorge
-      <br class="md:hidden"/>
+      <br class="md:hidden" />
       <span
-        style="font-family: 'Cookie'"
-        class="inline-block bg-[#C6D7CF] rounded-[50%] text-[#4A6360] text-[40px] font-light w-[50px] h-[50px] md:w-[60px] md:h-[60px] leading-[50px] md:leading-[60px]"
-        >&</span
-      >
-      <br class="md:hidden"/>
+        class="inline-block bg-mint rounded-[50%] text-forest text-[40px] font-cookie font-[300] w-[50px] h-[50px] md:w-[60px] md:h-[60px] leading-[50px] md:leading-[60px]">&</span>
+      <br class="md:hidden" />
       Yina
     </h1>
     <div class="h-[1px] w-2/4 md:w-[85%] bg-white mx-auto my-0 mt-5"></div>
@@ -29,30 +25,20 @@
 
     <!-- Box frase portada -->
     <div class="mt-[50px] w-[90%] md:w-[85%] lg:w-auto mx-auto">
-      <img
-        src="../../../../assets/images/banner-home/comilla-apertura.svg"
-        alt="comilla-apertura"
-        class="w-[30px] h-[30px] mx-auto my-2.5"
-      />
-      <p style="font-family: 'Open Sans Light'" class="text-[20px] md:text-[28px]">
+      <img src="../../../../assets/images/banner-home/comilla-apertura.svg" alt="comilla-apertura"
+        class="w-[30px] h-[30px] mx-auto my-2.5" />
+      <p class="text-[20px] md:text-[28px] font-light">
         Todos somos mortales,<br />
         hasta el primer beso y la segunda copa de vino
       </p>
-      <img
-        src="../../../../assets/images/banner-home/comilla-cierre.svg"
-        alt="comilla-cierre"
-        class="w-[30px] h-[30px] mx-auto my-2.5"
-      />
+      <img src="../../../../assets/images/banner-home/comilla-cierre.svg" alt="comilla-cierre"
+        class="w-[30px] h-[30px] mx-auto my-2.5" />
     </div>
     <!-- Box frase portada -->
 
     <div class="w-14 h-w-14 mx-auto mt-10">
-      <ng-lottie
-        class="w-[90px] h-[90px] max-w-full max-h-full"
-        [options]="options"
-        (animationCreated)="animationCreated($event)"
-      />
+      <ng-lottie class="w-[90px] h-[90px] max-w-full max-h-full" [options]="options"
+        (animationCreated)="animationCreated($event)" />
     </div>
   </div>
 </section>
-

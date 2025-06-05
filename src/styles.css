@@ -21,11 +21,37 @@
   font-style: normal;
 }
 
-/* Aplicación global (opcional) */
-body {
-  font-family: 'Open Sans', sans-serif;
+@theme {
+  --font-light: 'Open Sans Light', sans-serif;
+  --font-cookie: 'Cookie', cursive;
+
+  /* forest: #4A6360 */
+  --color-forest: #4A6360;
+
+  /* sage: #81948B */
+  --color-sage:  #81948B;
+
+  /* mint: #C6D7CF */
+  --color-mint:  #C6D7CF;
+
+  /* linen: #FAF7F3 */
+  --color-linen: #FAF7F3;
+
+  /* sand: #EFEDE7 */
+  --color-sand: #EFEDE7;
+
+  /* stone: #868686 */
+  --color-stone: #868686;
+
+  /* gold: #BFA880 */
+  --color-gold: #BFA880;
+
+  --shadow-rounded: 0px 0px 15px -1px rgba(0,0,0,0.4); 
+
+  /* half: 50% */
+  --radius-half: 50%
 }
 
-span {
-    font-family: 'Open Sans Light', sans-serif;
+:root {
+  font-family: "Open Sans", "sans-serif";
 }
