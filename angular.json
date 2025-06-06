@@ -25,9 +25,16 @@
           ],
             "styles": [
               "node_modules/animate.css/animate.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "@fancyapps/ui/dist/fancybox/fancybox.css",
+              "node_modules/slick-carousel/slick/slick.css",
+              "node_modules/slick-carousel/slick/slick-theme.css"
             ],
-            "scripts": []
+            "scripts": [ 
+              "node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -81,9 +88,16 @@
         ],
             "styles": [
               "node_modules/animate.css/animate.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "@fancyapps/ui/dist/fancybox/fancybox.css",
+              "node_modules/slick-carousel/slick/slick.css",
+              "node_modules/slick-carousel/slick/slick-theme.css"
             ],
-            "scripts": []
+            "scripts": [ 
+              "node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js"
+            ]
           }
         }
       }
