@@ -1,0 +1,30 @@
+.carousel ::ng-deep .slick-slide {
+  padding: 0 8px;
+  /* Ajusta el espacio entre slides */
+  box-sizing: border-box;
+  margin-top: 38px;
+  padding-bottom: 30px;
+  /* Espacio entre el slider y el header */
+}
+
+::ng-deep .slick-slide {
+  padding-bottom: 25px;
+}
+
+.carousel {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1440px) {
+  .carousel {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
