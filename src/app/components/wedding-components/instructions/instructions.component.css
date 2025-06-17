@@ -4,6 +4,7 @@
       center top no-repeat var(--color-sand);
     padding-top: 14%;
     position: relative;
+    padding-bottom: 35%;
   }
 
   .instructions::after {
