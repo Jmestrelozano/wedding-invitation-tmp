@@ -1,6 +1,7 @@
 import { AnimationOptions, LottieComponent } from 'ngx-lottie';
 import { Component } from '@angular/core';
 import player, { AnimationItem } from 'lottie-web';
+import { TitleCoupleComponent } from "../../ui/title-couple/title-couple.component";
 
 export function playerFactory() {
   return player;
@@ -8,7 +9,7 @@ export function playerFactory() {
 @Component({
   selector: 'app-banner-home',
   standalone: true,
-  imports: [LottieComponent],
+  imports: [LottieComponent, TitleCoupleComponent],
   templateUrl: './banner-home.component.html',
   styleUrl: './banner-home.component.css'
 })
