@@ -1,7 +1,17 @@
-.confirmations {
-    position: relative;
-    background: var(--color-linen);
-    padding-bottom: 10%;
-    padding-top: 10%;
-    margin-top: -2px;
+@layer utilities {
+    .confirmations {
+        position: relative;
+        background: var(--color-linen);
+        padding-bottom: 10%;
+        padding-top: 10%;
+        margin-top: -2px;
+    }
+
+    @media only screen and (max-width: 425px) {
+        .confirmations {
+            padding-top: 30%;
+            padding-bottom: 20%;
+        }
+    }
+
 }
