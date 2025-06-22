@@ -1,0 +1,7 @@
+.confirmations {
+    position: relative;
+    background: var(--color-linen);
+    padding-bottom: 10%;
+    padding-top: 10%;
+    margin-top: -2px;
+}
