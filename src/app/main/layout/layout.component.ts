@@ -16,6 +16,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { LoaderHeartComponent } from '../../components/common/loader-heart/loader-heart.component';
 import { SplashMusicComponent } from '../../components/ui/lottie/splash-music/splash-music.component';
+import { FooterComponent } from "../../components/common/footer/footer.component";
 
 @Component({
   standalone: true,
@@ -26,7 +27,8 @@ import { SplashMusicComponent } from '../../components/ui/lottie/splash-music/sp
     RouterModule,
     LoaderHeartComponent,
     SplashMusicComponent,
-  ],
+    FooterComponent
+],
 })
 export class LayoutComponent implements OnInit {
   @ViewChild('modalContent', { static: false }) modalContent!: ElementRef;
