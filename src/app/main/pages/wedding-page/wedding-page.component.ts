@@ -6,11 +6,12 @@ import { PortraitsComponent } from "../../../components/wedding-components/portr
 import { InstructionsComponent } from "../../../components/wedding-components/instructions/instructions.component";
 import { GiftsComponent } from "../../../components/wedding-components/gifts/gifts.component";
 import { BannerInstagramComponent } from "../../../components/wedding-components/banner-instagram/banner-instagram.component";
+import { ConfirmationsComponent } from "../../../components/wedding-components/confirmations/confirmations.component";
 
 @Component({
   selector: 'app-wedding-page',
   standalone: true,
-  imports: [BannerHomeComponent, WeddingCountdownComponent, EventScheduleComponent, PortraitsComponent, InstructionsComponent, GiftsComponent, BannerInstagramComponent],
+  imports: [BannerHomeComponent, WeddingCountdownComponent, EventScheduleComponent, PortraitsComponent, InstructionsComponent, GiftsComponent, BannerInstagramComponent, ConfirmationsComponent],
   templateUrl: './wedding-page.component.html',
 })
 export class WeddingPageComponent {
