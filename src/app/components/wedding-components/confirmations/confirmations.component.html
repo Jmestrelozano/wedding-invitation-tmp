@@ -5,11 +5,15 @@
             classHeading1="text-sage text-[65px] md:text-[85px] flex-row gap-3"
             classSpan="text-forest text-[28px] w-[30px] h-[30px] md:w-[40px] md:h-[40px] leading-[30px] md:leading-[45px]" />
         <ul class="text-sage uppercase font-normal flex flex-col gap-5 text-center md:text-right">
-            <li class="hover:text-forest cursor-pointer">
+            <li (click)="openModal()" class="hover:text-forest cursor-pointer">
                 Confirmar asistencia a ceremonia</li>
             <li class="hover:text-forest cursor-pointer">Sugerir canción</li>
             <li class="hover:text-forest cursor-pointer">Agendar Fiesta</li>
             <li class="hover:text-forest cursor-pointer">Agendar Ceremonia</li>
         </ul>
     </div>
+
+    <app-modal [show]="isModalVisible" (close)="closeModal()">
+        <app-content-confirmation-modal (closeModal)="closeModal()" />
+    </app-modal>
 </section>
